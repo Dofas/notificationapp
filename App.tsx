@@ -69,7 +69,7 @@ export default function App() {
       if (status !== 'granted') {
         const { status: newStatus } = await Notifications.requestPermissionsAsync();
         if (newStatus !== 'granted') {
-          alert('You need to enable notifications for this app to receive them.');
+          Alert.alert('Permission required', 'Push notifications need the appropriate permissions');
         }
       }
     })();
